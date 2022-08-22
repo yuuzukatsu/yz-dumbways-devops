@@ -1,4 +1,12 @@
-# Day 1 Instalasi Ubuntu Server
+# Day 1
+
+# Definisi DevOps
+
+Menurut saya, DevOps adalah kelompok atau bagian dari suatu team yang
+bertugas untuk maintaining, monitoring, dan developing infrastruktur
+untuk suatu aplikasi yang dikembangkan oleh developer code
+
+#  Instalasi Ubuntu Server
 
 ## Step 1
 
@@ -177,3 +185,49 @@ username dan password dan instalasi server ubuntu sudah selesai !
 
 ![](./images/media/image26.png){width="6.268055555555556in"
 height="4.607638888888889in"}
+
+# Login melalui SSH
+
+Untuk login melalui SSH, saya akan menggunakan aplikasi PuTTY
+
+![](./images/media/image27.png){width="4.708333333333333in"
+height="4.604166666666667in"}
+
+![](./images/media/image28.png){width="6.268055555555556in"
+height="2.904861111111111in"}
+
+# Tes koneksi ke Internet
+
+Dikarenakan instalasi sebelumnya memilih minimal instalation (Step 12),
+command ping tidak ada di instalasi ubuntu saya
+
+![](./images/media/image29.png){width="4.292265966754155in"
+height="1.166829615048119in"}
+
+Karena itu saya harus menginstal package ping dulu dengan command
+berikut
+
+`sudo apt-get update`
+
+`sudo apt-get install iputils-ping`
+
+![](./images/media/image30.png){width="6.268055555555556in"
+height="3.4125in"}
+
+![](./images/media/image31.png){width="6.268055555555556in"
+height="3.7645833333333334in"}
+
+-4 dibagian akhir berarti ping menggunakan ipv4
+
+# Instalasi Docker
+
+Pada step 21, sesuai task yang diberikan harusnya package docker
+dipilih. Karena tidak saya pilih, saya akan menginstall secara manual.
+Command yang digunakan
+
+`sudo apt-get update`
+
+`sudo apt-get install docker`
+
+![](./images/media/image32.png){width="6.268055555555556in"
+height="3.546527777777778in"}
