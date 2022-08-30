@@ -15,6 +15,118 @@ mengoperasikan sistem operasi
 
 -   Pengoperasian bisa lebih cepat
 
+## Command untuk text manipulation
+
+### cat
+
+Digunakan untuk menampilkan isi file ke terminal
+
+![](./images/media/image1.png) 
+
+### sed
+
+Digunakan untuk mereplace suatu text dalam file
+
+![](./images/media/image2.png) 
+
+### grep
+
+Digunakan untuk mencari suatu text dalam file
+
+![](./images/media/image3.png) 
+
+### sort
+
+Digunakan untuk mengurutkan text
+
+![](./images/media/image4.png) 
+
+### echo
+
+Digunakan untuk menampilkan text pada terminal
+
+![](./images/media/image5.png) 
+
+### wc
+
+Untuk menghitung ada berapa baris, kalimat, dan kata dalam file
+
+![](./images/media/image6.png) 
+
+### Bash Terminal Operator
+
+Dalam penggunaan, ada operator yang dapat digunakan untuk menggabung
+beberapa command menjadi satu. Beberapa operatornya antara lain adalah
+
+-   `;` (sequence) untuk menjalankan beberapa command berurutan dan
+    bergantian\
+    ![](./images/media/image7.png) 
+
+-   `&` (Parallel) untuk menjalankan beberapa command sekaligus\
+    ![](./images/media/image8.png) 
+
+-   `&&` (And) hanya akan menjalankan command kedua jika command pertama
+    berhasil\
+    ![](./images/media/image9.png) 
+
+-   `||` (Or) hanya akan menjalankan command kedua jika command pertama
+    gagal\
+    ![](./images/media/image10.png) 
+
+-   `|` (Pipe) akan mengirimkan ouput command pertama ke command kedua\
+    ![](./images/media/image11.png) 
+
+-   `|&` (Pipe error) akan mengirimkan output error dari command pertama
+    ke command kedua\
+    ![](./images/media/image12.png) 
+
+-   `<` (Redirecting input) untuk memasukkan input dari file ke command\
+    ![](./images/media/image13.png) 
+
+-   `<<` (Redirecting input -- here documents) digunakan unuk memasukkan
+    beberapa line input dari terminal ke suatu command\
+    ![](./images/media/image14.png) 
+
+-   `<<<` (Redirecting input -- here string) digunakan untuk memasukkan
+    satu baris string input ke suatu command\
+    ![](./images/media/image15.png)
+
+-   `>` (Redirect Output Truncate) untuk memasukkan output dari suatu
+    command ke file. Jika file sudah ada, maka isinya akan dihapus lalu
+    output command akan dimasukkan\
+    ![](./images/media/image16.png) 
+
+-   `>>` (Redirect Output Append) untuk memasukkan output dari suatu
+    command ke file. Jika file sudah ada, maka isinya tidak akan dihapus
+    lalu output command akan dimasukkan ke line terakhir file\
+    ![](./images/media/image17.png) 
+
+## Aplikasi untuk monitoring
+
+### htop
+
+![](./images/media/image18.png) 
+
+### nmon 
+
+![](./images/media/image19.png) \
+![](./images/media/image20.png) 
+
+### ps 
+
+Digunakan untuk melihat proses yang sedang berjalan
+
+![](./images/media/image21.png) 
+
+### lsof
+
+lsof (list of open files) digunakan untuk melihat file yang saat ini
+digunakan proses
+
+![](./images/media/image22.png) 
+
+![](./images/media/image23.png)
+
 ## Membuat script bash untuk update dan upgrade
 
 ### Step 1
@@ -27,7 +139,7 @@ sudo apt-get -y update
 
 sudo apt-get -y upgrade
 ```
-![](./images/media/image1.png) 
+![](./images/media/image24.png) 
 
 ### Step 2
 
@@ -35,7 +147,7 @@ Tambahkan permission execute di file dengan command `chmod`
 
 ```chmod +x <file-name>```
 
-![](./images/media/image2.png) 
+![](./images/media/image25.png) 
 
 ### Step 3
 
@@ -47,9 +159,9 @@ atau
 
 ```bash <filename>```
 
-![](./images/media/image3.png) 
+![](./images/media/image26.png) 
 
-## Membuat script bash untuk mencari file `sysctl.conf`
+## Membuat script bash untuk mencari file sysctl.conf
 
 ### Step 1
 
@@ -59,7 +171,7 @@ Buat file kosong dan isikan berikut
 
 sudo find / -name sysctl.conf -type f
 ```
-![](./images/media/image4.png) 
+![](./images/media/image27.png) 
 
 ### Step 2
 
@@ -67,7 +179,7 @@ Tambahkan permission execute di file dengan command `chmod`
 
 ```chmod +x <file-name>```
 
-![](./images/media/image5.png) 
+![](./images/media/image28.png) 
 
 ### Step 3
 
@@ -79,8 +191,7 @@ atau
 
 ```bash <filename>```
 
-![](./images/media/image6.png) 
-
+![](./images/media/image29.png) 
 ## Membuat script bash untuk membuka firewall port 22, 80, dan 443
 
 ### Step 1
@@ -97,7 +208,7 @@ sudo ufw allow https
 
 yes | sudo ufw enable
 ```
-![](./images/media/image7.png) 
+![](./images/media/image30.png) 
 
 ### Step 2
 
@@ -105,7 +216,7 @@ Tambahkan permission execute di file dengan command `chmod`
 
 ```chmod +x <file-name>```
 
-![](./images/media/image8.png) 
+![](./images/media/image31.png) 
 
 ### Step 3
 
@@ -117,5 +228,4 @@ atau
 
 ```bash <filename>```
 
-![](./images/media/image9.png) 
-
+![](./images/media/image32.png) 
