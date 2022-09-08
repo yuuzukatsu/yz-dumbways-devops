@@ -66,11 +66,11 @@ show tables;
 
 ### Step 7
 
-Buka file `/etc/mysql/mysql.conf.d/mysqld.cnf` lalu rubah line
-`bind-address` dan `mysqlx-bind-address` menjadi seperti berikut
+Buka file `/etc/mysql/mysql.conf.d/mysqld.cnf`
 ```
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
+lalu rubah line `bind-address` dan `mysqlx-bind-address` menjadi seperti berikut
 ```
 bind-address = 0.0.0.0
 mysqlx-bind-address = 0.0.0.0
