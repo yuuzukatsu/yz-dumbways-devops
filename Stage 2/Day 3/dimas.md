@@ -53,7 +53,7 @@ services:
       - '5000:5000'
     expose:
       - '5000'
-    command: ./wait-for-it.sh db:3306 -s -- ./start-server.sh
+    command: ./wait-for-it.sh db:3306 -s -t 0 -- ./start-server.sh
   db:
     image: mysql:8
     restart: always
@@ -82,15 +82,12 @@ docker compose up -d
 
 ### Step 6
 
-Masuk ke container backend dengan command berikut
-```
-docker compose exec -it backend bash
-```
-Lalu jalankan command berikut untuk import database ke server mysql
-```
-npx sequelize-cli db:migrate
-```
-![](./images/media/image6.png) 
+Cek aplikasi sudah berjalan
+
+![image](https://user-images.githubusercontent.com/67664879/189705438-9fd029f2-5bc0-43ca-905a-2232871a1277.png)
+![image](https://user-images.githubusercontent.com/67664879/189705577-8425fba6-0e60-45a2-9d30-cf9c15f9b0cc.png)
+![image](https://user-images.githubusercontent.com/67664879/189705944-e3ef6d93-126f-4d06-97cc-8069c5d5715d.png)
+
 
 ## Upload Docker Images ke hub.docker.com
 
