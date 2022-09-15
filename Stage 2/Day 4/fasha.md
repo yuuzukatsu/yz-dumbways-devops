@@ -40,7 +40,7 @@ agar memudahkan install docker, buat file bash dengan berisi perintah install do
 
 sudo apt-get update
 
-sudo apt-get install \ca-certificates\curl\gnupg\lsb-release\apt-transport-https\software-properties-common
+sudo apt-get install \ca-certificates \curl \gnupg \lsb-release \apt-transport-https \software-properties-common
 
 sudo mkdir -p /etc/apt/keyrings
 
@@ -58,7 +58,7 @@ docker -v
 
 jalankan file bashnya `sh nama_file.sh`
 
-![bash docker](https://user-images.githubusercontent.com/111863692/190395938-517394b9-c55a-418c-acc7-b4b478e643a8.png)
+![dockerbashnewnew](https://user-images.githubusercontent.com/111863692/190397607-e47dd85e-3edb-46fa-bb42-2f0d4cf9b257.png)
 
 2.pastikan diserver kamu sudah terinstall docker lalu jalankan `docker run --name jenkins1 -p 8080:8080 -p 50000:50000 -v jenkins_home:var/jenkins_home jenkins/jenkins:lts`
 
