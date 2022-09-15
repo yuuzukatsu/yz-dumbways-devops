@@ -34,6 +34,32 @@ pilih domain yang ingin dicerbot
 
 ![installjenkins1](https://user-images.githubusercontent.com/111863692/190261230-a7932023-c696-4728-9ebb-5f6dbfb312db.png)
 
+agar memudahkan install docker, buat file bash dengan berisi perintah install docker
+
+#!/bin/bash
+
+sudo apt-get update
+
+sudo apt-get install \ca-certificates\curl\gnupg\lsb-release\apt-transport-https\software-properties-common
+
+sudo mkdir -p /etc/apt/keyrings
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+docker -v
+
+jalankan file bashnya `sh nama_file.sh`
+
+![bash docker](https://user-images.githubusercontent.com/111863692/190395938-517394b9-c55a-418c-acc7-b4b478e643a8.png)
+
 2.pastikan diserver kamu sudah terinstall docker lalu jalankan `docker run --name jenkins1 -p 8080:8080 -p 50000:50000 -v jenkins_home:var/jenkins_home jenkins/jenkins:lts`
 
 ![installjenkins3](https://user-images.githubusercontent.com/111863692/190261685-1db40de8-5253-41f9-98e0-d78dad068e1b.png)
