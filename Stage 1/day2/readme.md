@@ -150,6 +150,7 @@ height="1.6460629921259842in"}
 Localtunnel memerlukan node.js untuk menjalankan kodenya. Maka dari itu
 kita akan menginstall nvm terlebih dahulu. Jalankan command berikut
 untuk menginstall nvm
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash`
 
 ![](./images/media/image14.png){width="6.268055555555556in"
 height="1.85in"}
